@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand" href="#">Organic</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">  <i class="fas fa-hamburger" ></i> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav m-auto my-2 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#organic">TRENDING </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product">
+                  STORE
+                </a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#organic">ORGANIC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">CONTACT </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/html/myCart.html">
+                  My Cart
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+                <li>
+                  <a class="nav-link btn0 btn-primary" href="/html/register.html">Register</a>
+                </li>
+              </li>
+            </ul>
+            <form class="d-flex" id="searchForm" action="/search-food" method="GET">
+              <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn0" type="submit">Search</button>
+            </form>
+            <div id="searchResults"></div> <!-- A div to display search results -->
+          </div>
+        </div>
+      </nav> 
+
+      <section class="main">
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-lg-7 pt-5 text-center">
+                 
+                    <h1 class="pt-5">Nature has always cared for us</h1>
+                    <button class="btn1 mt-3">More Tips</button>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="organic" class="new">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-9 m-auto ">
+                    <div class="row text-center">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                            <img src="../images/fruit1-removebg-preview.png" class="img-fluid"  alt="">
+                            <h6>NATURAL</h6>
+                            
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                            <img src="../images/fruit3-removebg-preview.png" class="img-fluid" alt="">
+                            <h6>ORGANIC</h6>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                          <img src="../images/fruit5-removebg-preview.png" class="img-fluid" alt="">
+                          <H6>HEALTHY</H6>
+                      </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section id="product" class="product">
+        <div class="container py-5">
+          <div class="row" py-4>
+            <div class="col-lg-5 m-auto text-center">
+              <h1>What's trending</h1>
+              <h6 style="color: red">Be Healthy Organic Food</h6>
+            </div>
+           
+            
+            <div class="row py-5">
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack1.jpeg" class="card-img-top img fluid" alt=""></div>
+                  <div class="card-body text-center">
+                    <h5>Snack0</h5>
+                    <p>$2.00</p>
+                    <button onclick="addToCart('Snack0', 2.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+                
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack2.jpeg" class="card-img-top img fluid" alt=""></div>
+                  <div class="card-body text-center">
+                    <h5>Snack1</h5>
+                    <p>$1.00</p>
+                    <button onclick="addToCart('Snack1', 1.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+                
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack3.jpeg" class="card-img-top img fluid" alt=""></div>
+                  <div class="card-body text-center">
+                    <h5>Snack2</h5>
+                    <p>$2.10</p>
+                    <button onclick="addToCart('Snack2', 2.10)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+                
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack4.jpeg" class="card-img-top img fluid" alt=""></div>
+                  <div class="card-body text-center">
+                    <h5>Snack3</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack3', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+                
+              </div>
+           
+          </div>
+
+            <div class="row py-3">
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack4.jpeg" class="card-img-top img fluid" alt=""> </div>
+                  <div class="card-body text-center">
+                    <h5>Snack4</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack4', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+               
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto ">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack5.png" class="card-img-top img fluid" alt=""> </div>
+                  <div class="card-body text-center">
+                    <h5>Snack5</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack5', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                 
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack6.png" class="card-img-top img fluid" alt=""> </div>
+                  <div class="card-body text-center">
+                    <h5>Snack6</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack6', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  </div>
+               
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                <div class="card border-1 bg-light">
+                  <img src="../images/snack7.jpeg" class="card-img-top img fluid" alt=""> </div>
+                  <div class="card-body text-center">
+                   
+                    <h5>Snack7</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack7', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+              </div>
+              </div>
+              </div>
+              <div class="row py-3">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                  <div class="card border-1 bg-light">
+                    <img src="../images/snack8.jpeg" class="card-img-top img fluid" alt=""> </div>
+                    <div class="card-body text-center">
+                    <h5>Snack8</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack8', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                    </div>
+                  </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                  <div class="card border-1 bg-light">
+                    <img src="../images/snack9.jpeg" class="card-img-top img fluid" alt=""> </div>
+                    <div class="card-body text-center">
+                      <h5>Snack9</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack9', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                    </div>
+                 
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                  <div class="card border-1 bg-light">
+                    <img src="../images/snack10.png" class="card-img-top img fluid" alt=""> </div>
+                    <div class="card-body text-center">
+                      <h5>Snack10</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack10', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                    </div>
+                  </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                  <div class="card border-1 bg-light">
+                    <img src="../images/snack11.png" class="card-img-top img fluid" alt=""> </div>
+                    <div class="card-body text-center">
+                      <h5>Snack11</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack11', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                    </div>
+                  </div>
+                </div>
+             
+                <div class="row py-3">
+                  <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                    <div class="card border-1 bg-light">
+                      <img src="../images/snack1.jpeg" class="card-img-top img fluid" alt=""> </div>
+                      <div class="card-body text-center">
+                         <h5>Snack12</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack12', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                      </div>
+                    </div>
+                 
+                  <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                    <div class="card border-1 bg-light">
+                      <img src="../images/snack4.jpeg" class="card-img-top img fluid" alt=""> </div>
+                      <div class="card-body text-center">
+                    <h5>Snack13</h5>
+                    <p>$3.00</p>
+                    <button onclick="addToCart('Snack13', 3.00)" class="btn btn-primary">
+                      <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                      </div>
+                    </div>
+                 
+                  <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                    <div class="card border-1 bg-light">
+                      <img src="../images/snack5.png" class="card-img-top img fluid" alt=""> </div>
+                      <div class="card-body text-center">
+                        <h5>Snack14</h5>
+                        <p>$3.00</p>
+                        <button onclick="addToCart('Snack14', 3.00)" class="btn btn-primary">
+                          <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  
+                  <div class="col-lg-2 col-md-3 col-sm-6 col-6 m-auto">
+                    <div class="card border-1 bg-light">
+                      <img src="../images/snack6.png" class="card-img-top img fluid" alt=""> </div>
+                      <div class="card-body text-center">
+                        <h5>Snack15</h5>
+                        <p>$3.00</p>
+                        <button onclick="addToCart('Snack15', 3.00)" class="btn btn-primary">
+                          <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                 </div>
+               
+                  <div class="row py-2">
+                    <div class="col-lg-6 m-auto text-center">
+                      <button class="btn1" >Click For More</button>
+                    </div>
+                  </div>
+                 
+
+                </div>
+          </div>
+       
+      </section>
+      <section class="about">
+        <div class="row">
+          <div class="col-lg-7 m-auto text-center">
+            <h1>Welcome to our organic food society restaurant</h1>
+            <h6 style="color: red;">Be healthy organic food</h6>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-lg-12">
+            <div class="row">
+          <div class="col-lg-3 m-auto ">
+            <img src="../images/chef.png" class="img-fluid"  alt="">
+            <h3>The Best Quality Food</h3>
+            <h5>Traditonal dishes</h5>
+            <p>Biryani: A mixed rice dish made with basmati rice, meat (such as chicken, beef, goat, pork, lamb, prawn, or fish), vegetables, and a mix of spices, often accompanied by yogurt or raita. welcome home.</p>
+          </div>
+          <div class="col-lg-3 m-auto">
+            <img src="../images/home.jpg" class="img-fluid"  alt="">
+            <h3>Your Number One Choice</h3>
+            <h5>African dishes</h5>
+            <p>Injera (Ethiopia/Eritrea): A spongy, sourdough flatbread made from teff flour, typically used as a base for various stews (called wats) and salads. It is both a staple and an eating utensil in Ethiopian and Eritrean cuisine.</p>
+          </div>
+          <div class="col-lg-3 m-auto">
+            <img src="../images/index.avif" class="img-fluid"  alt="">
+            <h3>Nearer To Your Favorite</h3>
+            <h5>Modern dishes</h5>
+            <p> Sushi Burritos:  A fusion of sushi and burritos, these large rolls use seaweed and rice to wrap various fillings such as fish, avocado, and vegetables, similar to a sushi roll but in the form of a burrito.welcome.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-center m-auto">
+              <h4>Contact Us</h4>
+              <h6 style="color: red">Always be in touch with us</h6>
+            </div>
+          </div>
+          <div class="row py-4">
+            <div class="col-lg-4 m-auto">
+              <h6>LOCATION</h6>
+              <P>Moi Avenue</P>
+              <h6>PHONE</h6>
+              <p>0712345678</p>
+              <h6>E-MAIL</h6>
+              <p>elli@gmail.com</p>
+            </div>
+            
+            <div class="col-lg-7">
+              <form action="/submit-form" method="POST" id="comments">
+              <div class="row">
+                <div class="col-lg-6" py-2>
+                  <input type="text" class="form-control bg-light" placeholder="First Name" name="fname" required>
+                </div>
+                <div class="col-lg-6">
+                  <input type="text" class="form-control bg-light" placeholder="Last Name" name="lname">
+                </div>
+                </div>
+
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <textarea name="message" id="" class="form-control bg-light" cols="10" rows="5" placeholder="Write your message here... " required></textarea>
+                </div>
+              </div>
+              <button class="btn1">Submit</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="support">
+        <div class="container">
+        <div class="row py-4">
+          <div class="col-lg-9 m-auto text-center">
+           <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Join Our Society And Reap The Fruits</h2> 
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-lg-6 m-auto text-center">
+            <input type="text" placeholder="Enter your email">
+            <button class="btn2" >Submit</button>
+         
+        </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-3">
+                <h5>CUSTOMER CARE</h5>
+                <p>Regular</p>
+                <p>On Time</p>
+                <p>Always Care</p>
+              </div>
+              <div class="col-lg-3">
+                <h5>FAQ'S</h5>
+                <p>No Charges</p>
+                <p>Shopping & Delivery</p>
+                <p>Always Care</p>
+              </div>
+              <div class="col-lg-3">
+                <h5>OUR COMPANY</h5>
+                <p>About</p>
+                <p>New Food </p>
+                <p>Products</p>
+              </div>
+              <div class="col-lg-2 pt-2px">
+                <h5>SOCIAL MEDIA</h5>
+                <p class="fab fa-facebook"></p>
+                <p class="fab fa-twitter"></p>
+                <p class="fab fa-instagram"></p>
+                <p class="fab fa-google-plus"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p class="text-center">Copyright rights @2024 All rights observed</p>
+      </div>
+      </section>
+      <script>
+        function addToCart(productName, price) {
+          const userId = 'user123'; // Replace with actual user ID
+      
+          fetch('/add-to-cart', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ userId, productName, price }),
+          })
+          .then(response => response.text())
+          .then(data => {
+              alert(data); // Show success message
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+      }
+      </script>
+      <script>
+        document.getElementById('comments').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the form's default submission
+        
+            // Collect form data
+            const formData = {
+                fname: document.querySelector('input[name="fname"]').value,
+                lname: document.querySelector('input[name="lname"]').value,
+                message: document.querySelector('textarea[name="message"]').value,
+            };
+        
+            try {
+                // Send form data to the server via fetch
+                const response = await fetch('/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+        
+                const result = await response.text();
+                
+                if (response.ok) {
+                    // Show success alert
+                    alert('Thank you for your feedback!');
+                    // Optionally reset the form
+                    document.getElementById('comments').reset();
+                } else {
+                    // Show error message if something went wrong
+                    alert(`Error: ${result}`);
+                }
+            } catch (error) {
+                // Catch and show any other errors
+                console.error('Error:', error);
+                alert('An error occurred during submission.');
+            }
+        });
+        </script>
+        
+        <script>
+          document.getElementById('searchForm').addEventListener('submit', async function(event) {
+              event.preventDefault(); // Prevent form from submitting in the traditional way
+          
+              const query = document.getElementById('searchQuery').value;
+          
+              try {
+                  const response = await fetch(`/search-food?query=${encodeURIComponent(query)}`, {
+                      method: 'GET',
+                  });
+          
+                  const results = await response.json();
+                  
+                  if (response.ok) {
+                      // Display the search results
+                      displaySearchResults(results);
+                  } else {
+                      alert('No results found.');
+                  }
+              } catch (error) {
+                  console.error('Error:', error);
+                  alert('An error occurred during the search.');
+              }
+          });
+          
+          function displaySearchResults(results) {
+              const resultsContainer = document.getElementById('searchResults');
+              resultsContainer.innerHTML = ''; // Clear previous results
+          
+              if (results.length > 0) {
+                  results.forEach(item => {
+                      const foodItem = document.createElement('div');
+                      foodItem.className = 'food-item';
+                      foodItem.innerHTML = `
+                          <h3>${item.name}</h3>
+                          <p>${item.description}</p>
+                          <p>Price: ${item.price}</p>
+                      `;
+                      resultsContainer.appendChild(foodItem);
+                  });
+              } else {
+                  resultsContainer.innerHTML = '<p>No food items found.</p>';
+              }
+          }
+          </script>
+</body>
+</html>
