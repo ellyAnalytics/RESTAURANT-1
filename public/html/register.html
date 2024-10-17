@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/htmlindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>log in page</title>
+    
+</head>
+<body>
+    <div class = "container">
+         <div class = "box">
+            <div class = "box-login" id ="login">
+                <div class = "top-header">
+                    <h3>Hello, again</h3>
+                    <small>we are happy to have you back</small>
+                </div>
+                <form action="" id="loginForm">
+                <div class = "input-group">
+                    <div class="input-field">
+                        <input type="email" class = "input-box" id = "logEmail" required>
+                        <label for="logEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class = "input-box" id = "logPassword" required>
+                        <label for="logPassword" required>Password</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class = "fa regular fa-eye" id = "eye"></i>
+                                <i class="fa regular fa-eye-slash" id="eye-slash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id = "formCheck" class = "check">
+                    <label for="formCheck">Remember me</label>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class = "input-submit" value = "sign in">
+                </div>
+                <div class="forgot">
+                    <a href="#"><b>Forgot password?</b></a>
+                </div>
+                
+            </div>
+        </form>
+            <!---------- Register----->
+            <div class = "box-register" id ="register">
+                <div class = "top-header">
+                    <h3>Sign Up, Now</h3>
+                    <small>we are happy to have you with us</small>
+                </div>
+                <form action="" id="registerForm">
+                <div class = "input-group">
+                    <div class="input-field">
+                        <input type="text" class = "input-box" id = "regUser" required>
+                        <label for="regUser">Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" class = "input-box" id = "regEmail" required>
+                        <label for="regEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class = "input-box" id = "regPassword" required>
+                        <label for="regPassword" required>Password</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myRegPassword()">
+                                <i class = "fa regular fa-eye" id = "eye-2"></i>
+                                <i class="fa regular fa-eye-slash" id="eye-slash-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class = "input-box" id = "confirmPassword" required>
+                        <label for="confirmPassword" required>Confirm Password</label>
+                        <div class="eye-area">
+                            <div class="eye-box" onclick="myRegPassword()">
+                                <i class = "fa regular fa-eye" id = "eye-2"></i>
+                                <i class="fa regular fa-eye-slash-2" id="eye-slash-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id = "formCheck-2" class = "check">
+                    <label for="formCheck-2">Remember me</label>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class = "input-submitR" value = "sign up">
+                </div>
+                
+            </div>
+        </form>
+            <!----switch-->
+            <div class="switch">
+                <a href="#" class = "login" onclick="login()">Login</a>
+                <a href="#" class = "register" onclick="register()">Register</a>
+                <div class="btn-active" id="btn"></div>
+            </div>
+            
+            
+         </div>
+    </div>
+
+    <!--javascript-->
+    <!--login/register-->
+    <script>
+var x = document.getElementById('login');
+var y = document.getElementById('register');
+var z = document.getElementById('btn');
+
+function login(){
+     x.style.left = "27px";
+     y.style.left = "350px";
+     z.style.left = "0";
+            }
+function register(){
+     x.style.left = "-350px";
+     y.style.left = "25px";
+     z.style.left = "150px";
+            }
+    </script>
+        <!--View Password-->
+    <script>
+
+function myLogPassword(){
+ const a = document.getElementById('logPassword');
+ const b = document.getElementById('eye');
+ const c = document.getElementById('eye-slash');
+    if (a.type === "password"){
+        a.type = "text";
+        b.style.opacity = "1";
+        c.style.opacity = "0";
+    }else{
+        a.type = "password";
+        b.style.opacity = "0";
+        c.style.opacity = "1";
+    }
+}
+
+function myRegPassword(){
+const d = document.getElementById('regPassword');
+const e = document.getElementById('eye-2');
+const f = document.getElementById('eye-slash-2');
+
+if(d.type === "password"){
+    d.type = "text";
+    e.style.opacity = "1";
+    f.style.opacity = "0";
+}else{
+    d.type = "password";
+    e.style.opacity = "0";
+    f.style.opacity = "1";
+}
+}
+    </script>
+
+    <script>
+        // Handle Registration Form Submission
+document.getElementById('registerForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const formData = {
+        username: document.getElementById('regUser').value,
+        email: document.getElementById('regEmail').value,
+        password: document.getElementById('regPassword').value,
+        confirmPassword: document.getElementById('confirmPassword').value,  // Use a different ID for confirmPassword if necessary
+    };
+    
+     // Extract password and confirmPassword from formData for comparison
+     const { password, confirmPassword } = formData;
+
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match! Please try again.');
+        // Clear the password fields
+        document.getElementById('regPassword').value = '';
+        document.getElementById('confirmPassword').value = '';
+        return;  // Stop the form submission
+    }
+
+    try {
+        const response = await fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.text();
+        if (response.ok) {
+            alert('Registration successful!');
+            // Redirect to login page or clear the form
+            document.getElementById('registerForm').reset();
+                // Switch to the login form
+                login();
+        } else {
+            alert(`Error: ${result}`);
+            document.getElementById('registerForm').reset();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+// Handle Login Form Submission
+// Handle Login Form Submission
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    const formData = {
+        email: document.getElementById('logEmail').value,
+        password: document.getElementById('logPassword').value,
+    };
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            // Redirect to landingBootstrap.html on successful login
+            window.location.href = 'landingBootsrap.html';
+        } else {
+            const errorMessage = await response.text();  // Get the error message
+            alert(errorMessage);  // Display the error message
+            document.getElementById('loginForm').reset();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred during login.');
+    }
+});
+    </script>
+
+</body>
+</html>

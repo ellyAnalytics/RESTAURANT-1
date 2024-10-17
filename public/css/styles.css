@@ -1,0 +1,104 @@
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color:black;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: black;
+}
+
+.search{
+    height: 40px;
+    width: 100px;
+    border-radius:60px;
+    outline: none;
+    border: 2px solid rgb(248, 26 ,92);
+    margin-right: -35px;
+}
+.btn0{
+    height: 40px;
+     width: 90px;
+     outline:none;
+     border:none;
+     background:  rgb(248, 26 ,92);
+     color :white;
+    font-weight: 700 ;
+    border-radius: 60px;
+} 
+.main{
+    background: linear-gradient(to bottom, rgba(116, 82, 236, 0.5),rgba(125, 55, 230, 0.5)),url("../images/index.avif")no-repeat; 
+    /*background: url("../images/fruit1-removebg-preview.png");*/
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position:50% 50%;
+}
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: aqua;
+}
+.main .btn1{   
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26 ,92);
+    color:aqua;
+    font-weight: 700;
+    border-radius: 60px;
+} 
+.support{
+    background-color: black;
+    color: white;
+}
+.btn2{
+    height: 45px;
+    width: 100px;
+    background: white;
+    margin-left: -10px;
+    border: 2px solid white;
+    font-weight: 00px;
+}
+.support input{
+    height: 45px;
+    width:55%;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    margin-top: 20px;
+    font-weight: 600px;
+}
+.product .btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26 ,92);
+    color:aqua;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.contact .btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26 ,92);
+    color:aqua;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.card {
+    width: 150px;           /* Set a fixed width for the card */
+    margin: 0 auto;   
+    padding-bottom: 20px;         /* Maintain aspect ratio */
+}
+@media (max-width: 768px) { /* Adjust for phone view */
+    .col-lg-2 {
+        margin-bottom: 15px; /* Space between rows */
+}}
